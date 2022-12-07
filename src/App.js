@@ -1,16 +1,11 @@
 import pokemonLogo from '../src/img/pokemon.png'
 import pokeApiLogo from '../src/img/pokeapi.png'
 import { useState, useEffect } from 'react';
-import MiApi from './miApi'
+import MyApi from './miApi'
 
 
 function App() {
-  const [info, setInfo] = useState(MiApi);
-
-
-
-
-    console.log(info);
+  
         
 
     return (
@@ -36,19 +31,11 @@ function App() {
 
         <hr />
 
-        <div className='search'>
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <input placeholder='Buscar'/>
-        </div>
-        <div>
-        <MiApi setInfo={setInfo}/>  
-          <ul>
-        {   info.map((val) =>{
-                        return(
-                            <li>{val.name}</li>
-                        )
-                    })}
-                    </ul>
+       
+        <div className='pokemones'>
+
+        <MyApi />  
+     
         </div>
       </div>
     );
