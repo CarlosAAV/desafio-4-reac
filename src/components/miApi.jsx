@@ -5,7 +5,6 @@ const MyApi = () => {
   //consumo de api
   const [info, setInfo] = useState([]);
 
-
   useEffect(() => {
     consultarInformacion()
   }, []);
@@ -16,6 +15,9 @@ const MyApi = () => {
     const data = await response.json()
     setInfo(data.results)
   }
+/*--------------------------------*/
+
+
 
   //filter
   const filtrar = async (val) => {
@@ -33,6 +35,7 @@ const MyApi = () => {
     }
 
   }
+  /*--------------------------------*/
 
   //ordenado por nombre
   info.sort((a, b) => {
